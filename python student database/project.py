@@ -157,8 +157,12 @@ def update_data():
 
     # SQL UPDATE query
     update_query = "UPDATE students_guidb SET Firstname=%s, Lastname=%s, Email=%s, Mobilenumber=%s, Yearofentry=%s, Gender=%s,DEPARTMENT=%s,FACULTY=%s, DOB=%s WHERE MatricNo=%s"
-    values = (first_name, last_name, email, mobile_number, year_of_entry, gender, dob, matric_no,department,faculty)
+    values = (first_name, last_name, email, mobile_number, year_of_entry, gender, dob,department,faculty, matric_no)
+
+    student_table.delete(*student_table.get_children())
+
     messagebox.showinfo(title="success", message="student data updated succesfully")
+
 
     # MatricNo.set("")
     # Firstname.set("")
@@ -172,7 +176,6 @@ def update_data():
     cursor.execute(update_query, values)
     conn.commit()
     
-    show_all()
 
 
 

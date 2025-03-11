@@ -316,7 +316,7 @@ Email_entry.grid(row=3,column=1,padx=20,pady=10)
 
 
 # --------------mobile-number--------------------
-mobile_number_lbl=tkinter.Label(detail_frame,text="Mobile number:",font=("Microsoft Yahei UI Light",12),bg="#57a1f8")
+mobile_number_lbl=tkinter.Label(detail_frame,text="Mobile no:",font=("Microsoft Yahei UI Light",12),bg="#57a1f8")
 mobile_number_lbl.grid(row=4,column=0,padx=20,pady=10)
 
 mobile_number_entry=tkinter.Entry(detail_frame,bd=3,font=("Microsoft Yahei UI Light",12),textvariable=Mobilenumber)
